@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- The app is pointless without a rear camera; Play filters devices accordingly. -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <!-- Exactly what the capture pipeline needs — nothing else (no microphone, location, network). -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name=".SerendipApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:enableOnBackInvokedCallback="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Serendip"
+        android:localeConfig="@xml/locales_config"
+        tools:targetApi="36">
+
+        <activity
+            android:name=".presentation.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden|uiMode|smallestScreenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+            Camera foreground service. Android 14+ allows starting a camera-type FGS only while the
+            app is visible (or from a notification action); the app never tries to start it from
+            alarms or BOOT_COMPLETED — see docs/ARCHITECTURE.md.
+        -->
+        <service
+            android:name=".service.AutoCaptureService"
+            android:exported="false"
+            android:foregroundServiceType="camera"
+            android:stopWithTask="false" />
+
+        <!-- Exact/inexact alarm wake-ups for the scheduler (delivered to the running service / engine). -->
+        <receiver
+            android:name=".scheduler.CaptureAlarmReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.flareaward.serendip.action.WAKE_UP" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+            After a reboot or an app update the scheduler state is restored and the user is told to
+            resume from the app: a camera FGS must not be started from these broadcasts.
+        -->
+        <receiver
+            android:name=".service.BootCompletedReceiver"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Notification action "Turn off" (works without bringing the app to the foreground). -->
+        <receiver
+            android:name=".service.ServiceCommandReceiver"
+            android:exported="false" />
+    </application>
+</manifest>

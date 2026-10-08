@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <!-- ===================================================== general -->
+    <string name="app_name" translatable="false">Serendip</string>
+    <string name="tab_dashboard">Главная</string>
+    <string name="tab_photos">Фотографии</string>
+    <string name="tab_history">История</string>
+    <string name="tab_settings">Настройки</string>
+
+    <string name="action_grant">Разрешить</string>
+    <string name="action_grant_camera">Разрешить доступ к камере</string>
+    <string name="action_grant_notifications">Разрешить уведомления</string>
+    <string name="action_open_settings">Открыть настройки</string>
+    <string name="action_resume">Возобновить</string>
+    <string name="action_allow_unrestricted">Разрешить работу без ограничений</string>
+    <string name="action_learn_more">Подробнее</string>
+    <string name="action_back">Назад</string>
+    <string name="action_continue">Продолжить</string>
+    <string name="action_share">Поделиться</string>
+    <string name="action_delete">Удалить</string>
+    <string name="action_cancel">Отмена</string>
+    <string name="value_on">Вкл.</string>
+    <string name="value_off">Выкл.</string>
+
+    <!-- ===================================================== time formatting -->
+    <string name="day_today">Сегодня</string>
+    <string name="day_yesterday">Вчера</string>
+    <string name="duration_less_than_minute">меньше минуты</string>
+    <string name="duration_in_minutes">%1$d мин</string>
+    <string name="duration_in_hours_minutes">%1$d ч %2$d мин</string>
+    <string name="minutes_short">%d мин</string>
+    <string name="hours_short">%d ч</string>
+    <string name="hours_minutes_short">%1$d ч %2$d мин</string>
+    <string name="interval_range">%1$s – %2$s</string>
+
+    <!-- ===================================================== schedule modes -->
+    <string name="mode_fully_random">Полностью случайно</string>
+    <string name="mode_random_interval">Случайный интервал</string>
+
+    <!-- ===================================================== failure reasons (human readable) -->
+    <string name="failure_camera_permission">Нет разрешения на камеру</string>
+    <string name="failure_no_camera">Основная камера не найдена</string>
+    <string name="failure_camera_blocked">Доступ к камере заблокирован системой</string>
+    <string name="failure_camera_in_use">Камера была занята другим приложением</string>
+    <string name="failure_camera_unavailable">Камера была недоступна</string>
+    <string name="failure_camera_error">Ошибка камеры</string>
+    <string name="failure_timeout">Камера не ответила вовремя</string>
+    <string name="failure_storage_low">Недостаточно места в памяти</string>
+    <string name="failure_storage_write">Не удалось сохранить файл</string>
+    <string name="failure_image_invalid">Снимок получился повреждённым и был отброшен</string>
+    <string name="failure_unknown">Неизвестная ошибка</string>
+
+    <!-- ===================================================== pause reasons -->
+    <string name="pause_title_reboot">Пауза после перезагрузки</string>
+    <string name="pause_reason_reboot">После перезагрузки Android не позволяет приложениям запускать камеру в фоне. Просто откройте приложение (или нажмите «Возобновить» в уведомлении) — съёмка продолжится, расписание и счётчик дня сохранены.</string>
+    <string name="pause_title_app_updated">Пауза после обновления</string>
+    <string name="pause_reason_app_updated">После обновления приложения фоновую съёмку нужно возобновить вручную — так требует Android. Откройте приложение или нажмите «Возобновить».</string>
+    <string name="pause_title_camera_permission">Нет доступа к камере</string>
+    <string name="pause_reason_camera_permission">Разрешение на камеру отозвано. Без него автоматические фотографии невозможны.</string>
+    <string name="pause_title_camera_blocked">Камера заблокирована</string>
+    <string name="pause_reason_camera_blocked">Система запретила приложению доступ к камере (например, включён переключатель приватности или ограничения устройства). Проверьте настройки и возобновите съёмку.</string>
+    <string name="pause_title_service_not_allowed">Android остановил фоновую работу</string>
+    <string name="pause_reason_service_not_allowed">Система не разрешила запустить фоновую службу камеры. Это обычное ограничение Android: запуск возможен только пока приложение открыто. Откройте приложение или нажмите «Возобновить».</string>
+    <string name="pause_title_no_camera">Основная камера недоступна</string>
+    <string name="pause_reason_no_camera">На устройстве не найдена задняя камера, либо она недоступна приложениям.</string>
+    <string name="pause_title_service_not_running">Служба не запущена</string>
+    <string name="pause_reason_service_not_running">Фоновая служба была остановлена системой. Откройте приложение или нажмите «Возобновить», чтобы запустить её снова.</string>
+
+    <!-- ===================================================== notifications -->
+    <string name="channel_service_name">Фоновая работа</string>
+    <string name="channel_service_description">Постоянное уведомление, пока включены автоматические фотографии.</string>
+    <string name="channel_photos_name">Новые фотографии</string>
+    <string name="channel_photos_description">Сообщение после каждой успешно сделанной фотографии.</string>
+    <string name="channel_attention_name">Требуется внимание</string>
+    <string name="channel_attention_description">Съёмка приостановлена и нужно действие пользователя.</string>
+    <string name="notification_service_title">Автоматические фотографии включены</string>
+    <string name="notification_service_paused">Съёмка на паузе — откройте приложение</string>
+    <string name="notification_service_done">Сегодня %1$d из %2$d — на сегодня всё</string>
+    <string name="notification_service_progress">Сегодня %1$d из %2$d · следующее около %3$s</string>
+    <string name="notification_service_waiting">Сегодня %1$d из %2$d · ожидание</string>
+    <string name="notification_action_turn_off">Выключить</string>
+    <string name="notification_action_resume">Возобновить</string>
+    <string name="notification_photo_title">Новая фотография</string>
+    <string name="notification_photo_text">Сделана в %1$s</string>
+    <string name="notification_attention_title">Автоматические фотографии на паузе</string>
+
+    <!-- ===================================================== dashboard -->
+    <string name="hero_title">Автоматические фотографии</string>
+    <string name="today_progress">Сегодня %1$d / %2$d фотографий</string>
+    <string name="today_caption">случайные моменты дня</string>
+    <string name="next_paused">Съёмка приостановлена</string>
+    <string name="next_done_today">Дневной лимит достигнут — продолжим завтра</string>
+    <string name="next_photo_at_in">Следующее фото в %1$s · через %2$s</string>
+    <string name="next_photo_soon">Следующее фото совсем скоро</string>
+    <string name="next_none_today">Следующее фото будет запланировано автоматически</string>
+    <string name="status_disabled">Выключено</string>
+    <string name="status_no_camera_permission">Нужен доступ к камере</string>
+    <string name="status_starting">Запуск…</string>
+    <string name="status_done_today">На сегодня всё</string>
+    <string name="status_active">Активно</string>
+    <string name="status_waiting_tomorrow">Ожидание следующего дня</string>
+
+    <string name="snackbar_camera_permission">Для автоматических фотографий нужно разрешение на камеру</string>
+    <string name="snackbar_service_not_allowed">Android не разрешил запустить фоновую службу. Попробуйте ещё раз, пока приложение открыто.</string>
+
+    <string name="banner_camera_title">Нет доступа к камере</string>
+    <string name="banner_camera_text">Без разрешения на камеру приложение не сможет делать фотографии. Разрешите доступ или откройте системные настройки.</string>
+    <string name="banner_restricted_title">Фоновая работа ограничена</string>
+    <string name="banner_restricted_text">Для этого приложения включён режим «Ограничено»: Android будет останавливать съёмку в фоне. Переключите фоновую активность в режим «Без ограничений».</string>
+    <string name="banner_background_title">⚠️ Android может ограничивать фоновую работу</string>
+    <string name="banner_background_text">Оптимизация батареи может откладывать или прерывать фоновую съёмку. Разрешите работу без ограничений — это снижает риск, но не гарантирует съёмку в каждый момент.</string>
+    <string name="banner_notifications_title">Уведомления выключены</string>
+    <string name="banner_notifications_text">Без уведомлений вы не увидите постоянную карточку службы и сообщения о новых фотографиях. Съёмка при этом продолжит работать.</string>
+
+    <string name="schedule_card_title">Расписание</string>
+    <string name="schedule_mode_label">Режим</string>
+    <string name="schedule_per_day_label">Фотографий в день</string>
+    <string name="schedule_interval_label">Интервал</string>
+    <string name="schedule_screen_off_label">Экран выключен</string>
+    <string name="schedule_screen_off_skip">Пропускать</string>
+    <string name="schedule_screen_off_shoot">Снимать</string>
+    <string name="schedule_notify_label">Уведомление после фото</string>
+
+    <string name="state_card_title">Состояние</string>
+    <string name="state_camera">Камера</string>
+    <string name="state_notifications">Уведомления</string>
+    <string name="state_background">Фоновая работа</string>
+    <string name="state_service">Фоновая служба</string>
+    <string name="status_granted">Разрешено</string>
+    <string name="status_denied">Нет доступа</string>
+    <string name="status_notifications_on">Включены</string>
+    <string name="status_notifications_off">Выключены</string>
+    <string name="status_unrestricted_short">Без ограничений</string>
+    <string name="status_optimized_short">Оптимизация</string>
+    <string name="status_restricted_short">Ограничено</string>
+    <string name="status_unrestricted">✅ Работа без ограничений</string>
+    <string name="status_optimized">⚠️ Android может ограничивать фоновую работу</string>
+    <string name="status_restricted">⛔ Фоновая работа ограничена</string>
+    <string name="status_service_off">Выключена</string>
+    <string name="status_service_running">Работает</string>
+    <string name="status_service_stopped">Не запущена</string>
+    <string name="status_service_paused">На паузе</string>
+
+    <string name="latest_photo_title">Последняя фотография</string>
+    <string name="latest_photo_hint">Нажмите, чтобы открыть</string>
+    <string name="latest_photo_none">Пока нет ни одной фотографии. Первая появится в случайный момент, как только съёмка будет включена.</string>
+
+    <!-- ===================================================== photos -->
+    <string name="photos_title">Фотографии</string>
+    <string name="photos_empty_title">Здесь будут ваши фотографии</string>
+    <string name="photos_empty_text">Включите автоматические фотографии — и приложение само поймает несколько случайных моментов дня.</string>
+    <string name="photos_empty_action">На главную</string>
+
+    <!-- ===================================================== photo viewer -->
+    <string name="viewer_subtitle">Автоматическая фотография</string>
+    <string name="viewer_delete_failed">Не удалось удалить фотографию</string>
+    <string name="viewer_missing_title">Фотография недоступна</string>
+    <string name="viewer_missing_text">Файл был удалён из галереи устройства или перемещён. Запись в истории сохранена.</string>
+    <string name="viewer_delete_title">Удалить фотографию?</string>
+    <string name="viewer_delete_text">Файл будет удалён с устройства. Это действие нельзя отменить.</string>
+
+    <!-- ===================================================== history -->
+    <string name="history_title">История</string>
+    <string name="history_empty_title">История пока пуста</string>
+    <string name="history_empty_text">Здесь будут отображаться все попытки съёмки: успешные фотографии, пропуски и ошибки — простыми словами.</string>
+    <string name="history_success">Фотография сделана</string>
+    <string name="history_success_deleted">Фотография сделана (файл удалён)</string>
+    <string name="history_failed">Не удалось: %1$s</string>
+    <string name="history_skipped_screen_off">Пропущено: экран был выключен</string>
+    <string name="history_missed_hint">%1$s · момент пропущен, следующий назначен заново</string>
+    <plurals name="history_day_summary">
+        <item quantity="one">%d фотография</item>
+        <item quantity="few">%d фотографии</item>
+        <item quantity="many">%d фотографий</item>
+        <item quantity="other">%d фотографии</item>
+    </plurals>
+    <plurals name="history_skipped_screen_off_many">
+        <item quantity="one">Пропущен %d момент: экран был выключен</item>
+        <item quantity="few">Пропущено %d момента: экран был выключен</item>
+        <item quantity="many">Пропущено %d моментов: экран был выключен</item>
+        <item quantity="other">Пропущено %d момента: экран был выключен</item>
+    </plurals>
+    <plurals name="history_missed">
+        <item quantity="one">Пропущен %d запланированный момент (телефон был выключен или спал)</item>
+        <item quantity="few">Пропущено %d запланированных момента (телефон был выключен или спал)</item>
+        <item quantity="many">Пропущено %d запланированных моментов (телефон был выключен или спал)</item>
+        <item quantity="other">Пропущено %d запланированных момента (телефон был выключен или спал)</item>
+    </plurals>
+
+    <!-- ===================================================== settings -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_section_auto">Автоматические фотографии</string>
+    <string name="settings_auto_subtitle">Снимать основной камерой в случайные моменты дня</string>
+    <string name="settings_daily_limit">Фотографий в день</string>
+    <string name="settings_daily_limit_subtitle">Счётчик обнуляется в полночь по местному времени</string>
+    <string name="settings_mode">Режим расписания</string>
+    <string name="settings_mode_fully_random_hint">Нужное число моментов распределяется по дню случайно, без серий и без «догоняющих» снимков.</string>
+    <string name="settings_mode_interval_hint">После каждой попытки выбирается новая случайная пауза в заданных пределах — пока не исчерпан дневной лимит.</string>
+    <string name="settings_interval_min">Минимальный интервал</string>
+    <string name="settings_interval_max">Максимальный интервал</string>
+    <string name="settings_interval_summary">Пауза между снимками: %1$s</string>
+    <string name="settings_interval_doze_hint">В режиме сна Android может сдвигать пробуждение на несколько минут — это нормально.</string>
+    <string name="settings_skip_screen_off">Не фотографировать при выключенном экране</string>
+    <string name="settings_skip_screen_off_subtitle">Момент пропускается и не считается снимком; «догоняющих» фотографий после включения экрана не будет</string>
+
+    <string name="settings_section_notifications">Уведомления</string>
+    <string name="settings_notify_success">Уведомлять после успешной фотографии</string>
+    <string name="settings_notify_success_subtitle">Короткое сообщение с миниатюрой — только когда снимок действительно сохранён</string>
+    <string name="settings_notifications_permission">Разрешение на уведомления</string>
+    <string name="settings_notifications_hint">Уведомления выключены в системе: вы не увидите карточку службы и сообщения о новых фото.</string>
+
+    <string name="settings_section_background">Фоновая работа</string>
+    <string name="background_unrestricted_text">Android не применяет к приложению оптимизацию батареи. Фоновая служба может работать, пока включены автоматические фотографии.</string>
+    <string name="background_optimized_text">Для приложения действует оптимизация батареи. Система может откладывать пробуждения и останавливать службу в фоне. Рекомендуем режим «Без ограничений».</string>
+    <string name="background_restricted_text">Фоновая активность приложения ограничена: Android будет останавливать съёмку, как только приложение уйдёт с экрана. Откройте настройки и выберите «Без ограничений».</string>
+    <string name="background_vendor_hint">На некоторых устройствах (Xiaomi, Huawei, Samsung, OnePlus и др.) есть дополнительные фирменные ограничения — проверьте раздел «Батарея» в настройках приложения.</string>
+    <string name="background_no_guarantee">Режим «Без ограничений» снижает вероятность остановки, но не гарантирует съёмку в каждый момент: окончательное решение всегда за системой.</string>
+    <string name="background_android_rules">Android разрешает запускать камеру в фоне только пока приложение открыто. После перезагрузки или обновления съёмку нужно возобновить вручную — приложение сообщит об этом уведомлением.</string>
+
+    <string name="settings_section_permissions">Разрешения</string>
+    <string name="settings_permissions_footer">Приложение запрашивает только камеру и уведомления. Микрофон, геолокация и доступ к сети не используются.</string>
+
+    <string name="settings_section_about">О приложении</string>
+    <string name="about_version">Версия</string>
+    <string name="about_description">Serendip — случайный фотодневник. В течение дня приложение само выбирает несколько моментов и делает снимок основной камерой, пока вы заняты своими делами.</string>
+    <string name="about_privacy">Все фотографии хранятся только на устройстве, в галерее. Приложение не отправляет данные в сеть и не анализирует содержимое снимков.</string>
+
+    <!-- ===================================================== onboarding -->
+    <string name="onboarding_welcome_title">Случайный фотодневник</string>
+    <string name="onboarding_welcome_text">Serendip делает несколько фотографий в день в случайные моменты — основной камерой, без вашего участия.</string>
+    <string name="onboarding_how_title">Как это работает</string>
+    <string name="onboarding_how_text">Вы выбираете, сколько снимков в день и в каком режиме. Приложение держит небольшую фоновую службу с постоянным уведомлением и в выбранный момент делает кадр, если телефон включён.</string>
+    <string name="onboarding_privacy_text">Снимки сохраняются только на этом устройстве. Никакой передачи в сеть, облака или аналитики. Микрофон не используется.</string>
+    <string name="onboarding_consent">Я понимаю, что приложение будет самостоятельно делать фотографии задней камерой в случайные моменты, пока включён этот режим</string>
+    <string name="onboarding_camera_title">Доступ к камере</string>
+    <string name="onboarding_camera_text">Единственное обязательное разрешение. Используется только задняя камера и только в запланированные моменты.</string>
+    <string name="onboarding_camera_denied_hint">Разрешение отклонено без возможности повторного запроса. Включите доступ к камере в системных настройках приложения.</string>
+    <string name="onboarding_notifications_title">Уведомления</string>
+    <string name="onboarding_notifications_text">Android показывает постоянное уведомление, пока работает фоновая служба, а после каждого удачного снимка приложение может прислать короткое сообщение. Это можно отключить позже.</string>
+    <string name="onboarding_background_title">Фоновая работа</string>
+    <string name="onboarding_background_text">Чтобы система реже останавливала съёмку, разрешите приложению работать без ограничений батареи. Это необязательно и не даёт гарантий, но заметно повышает надёжность.</string>
+    <string name="onboarding_status_label">Статус</string>
+    <string name="onboarding_done_title">Всё готово</string>
+    <string name="onboarding_done_text">Можно включить автоматические фотографии прямо сейчас или сделать это позже на главном экране. Настройки расписания — в разделе «Настройки».</string>
+    <string name="onboarding_done_no_camera">Без доступа к камере включить автоматические фотографии нельзя. Разрешение можно выдать позже на главном экране.</string>
+    <string name="onboarding_enable_now">Включить</string>
+    <string name="onboarding_later">Позже</string>
+</resources>

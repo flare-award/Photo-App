@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark-only palette; the Compose theme (presentation/theme/Color.kt) is the source of truth for UI colors. -->
+    <color name="serendip_background">#FF0B0C10</color>
+    <color name="serendip_gold">#FFEBC46B</color>
+    <color name="serendip_on_background">#FFE9E6DF</color>
+</resources>

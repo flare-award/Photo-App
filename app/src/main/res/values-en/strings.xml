@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ===================================================== general -->
+    <string name="tab_dashboard">Home</string>
+    <string name="tab_photos">Photos</string>
+    <string name="tab_history">History</string>
+    <string name="tab_settings">Settings</string>
+
+    <string name="action_grant">Allow</string>
+    <string name="action_grant_camera">Allow camera access</string>
+    <string name="action_grant_notifications">Allow notifications</string>
+    <string name="action_open_settings">Open settings</string>
+    <string name="action_resume">Resume</string>
+    <string name="action_allow_unrestricted">Allow unrestricted battery use</string>
+    <string name="action_learn_more">Learn more</string>
+    <string name="action_back">Back</string>
+    <string name="action_continue">Continue</string>
+    <string name="action_share">Share</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="value_on">On</string>
+    <string name="value_off">Off</string>
+
+    <!-- ===================================================== time formatting -->
+    <string name="day_today">Today</string>
+    <string name="day_yesterday">Yesterday</string>
+    <string name="duration_less_than_minute">less than a minute</string>
+    <string name="duration_in_minutes">%1$d min</string>
+    <string name="duration_in_hours_minutes">%1$d h %2$d min</string>
+    <string name="minutes_short">%d min</string>
+    <string name="hours_short">%d h</string>
+    <string name="hours_minutes_short">%1$d h %2$d min</string>
+    <string name="interval_range">%1$s – %2$s</string>
+
+    <!-- ===================================================== schedule modes -->
+    <string name="mode_fully_random">Fully random</string>
+    <string name="mode_random_interval">Random interval</string>
+
+    <!-- ===================================================== failure reasons -->
+    <string name="failure_camera_permission">No camera permission</string>
+    <string name="failure_no_camera">Main camera not found</string>
+    <string name="failure_camera_blocked">Camera access blocked by the system</string>
+    <string name="failure_camera_in_use">Camera was in use by another app</string>
+    <string name="failure_camera_unavailable">Camera was unavailable</string>
+    <string name="failure_camera_error">Camera error</string>
+    <string name="failure_timeout">Camera did not respond in time</string>
+    <string name="failure_storage_low">Not enough storage space</string>
+    <string name="failure_storage_write">Could not save the file</string>
+    <string name="failure_image_invalid">The image was corrupted and has been discarded</string>
+    <string name="failure_unknown">Unknown error</string>
+
+    <!-- ===================================================== pause reasons -->
+    <string name="pause_title_reboot">Paused after reboot</string>
+    <string name="pause_reason_reboot">After a reboot Android does not let apps start the camera in the background. Just open the app (or tap “Resume” in the notification) — capture continues, your schedule and today’s counter are preserved.</string>
+    <string name="pause_title_app_updated">Paused after update</string>
+    <string name="pause_reason_app_updated">After an app update background capture must be resumed manually — Android requires it. Open the app or tap “Resume”.</string>
+    <string name="pause_title_camera_permission">No camera access</string>
+    <string name="pause_reason_camera_permission">Camera permission was revoked. Automatic photos are impossible without it.</string>
+    <string name="pause_title_camera_blocked">Camera blocked</string>
+    <string name="pause_reason_camera_blocked">The system denied camera access to the app (for example a privacy toggle or device policy). Check the settings and resume capture.</string>
+    <string name="pause_title_service_not_allowed">Android stopped background work</string>
+    <string name="pause_reason_service_not_allowed">The system did not allow the camera foreground service to start. This is a normal Android restriction: the service can only be started while the app is open. Open the app or tap “Resume”.</string>
+    <string name="pause_title_no_camera">Main camera unavailable</string>
+    <string name="pause_reason_no_camera">No back camera was found on this device, or it is not available to apps.</string>
+    <string name="pause_title_service_not_running">Service not running</string>
+    <string name="pause_reason_service_not_running">The background service was stopped by the system. Open the app or tap “Resume” to start it again.</string>
+
+    <!-- ===================================================== notifications -->
+    <string name="channel_service_name">Background work</string>
+    <string name="channel_service_description">Persistent notification while automatic photos are enabled.</string>
+    <string name="channel_photos_name">New photos</string>
+    <string name="channel_photos_description">A message after every successfully taken photo.</string>
+    <string name="channel_attention_name">Needs attention</string>
+    <string name="channel_attention_description">Capture is paused and needs your action.</string>
+    <string name="notification_service_title">Automatic photos are on</string>
+    <string name="notification_service_paused">Capture paused — open the app</string>
+    <string name="notification_service_done">Today %1$d of %2$d — done for today</string>
+    <string name="notification_service_progress">Today %1$d of %2$d · next around %3$s</string>
+    <string name="notification_service_waiting">Today %1$d of %2$d · waiting</string>
+    <string name="notification_action_turn_off">Turn off</string>
+    <string name="notification_action_resume">Resume</string>
+    <string name="notification_photo_title">New photo</string>
+    <string name="notification_photo_text">Taken at %1$s</string>
+    <string name="notification_attention_title">Automatic photos are paused</string>
+
+    <!-- ===================================================== dashboard -->
+    <string name="hero_title">Automatic photos</string>
+    <string name="today_progress">Today %1$d / %2$d photos</string>
+    <string name="today_caption">random moments of the day</string>
+    <string name="next_paused">Capture is paused</string>
+    <string name="next_done_today">Daily limit reached — see you tomorrow</string>
+    <string name="next_photo_at_in">Next photo at %1$s · in %2$s</string>
+    <string name="next_photo_soon">Next photo any moment now</string>
+    <string name="next_none_today">The next photo will be scheduled automatically</string>
+    <string name="status_disabled">Off</string>
+    <string name="status_no_camera_permission">Camera access needed</string>
+    <string name="status_starting">Starting…</string>
+    <string name="status_done_today">Done for today</string>
+    <string name="status_active">Active</string>
+    <string name="status_waiting_tomorrow">Waiting for the next day</string>
+
+    <string name="snackbar_camera_permission">Camera permission is required for automatic photos</string>
+    <string name="snackbar_service_not_allowed">Android did not allow the background service to start. Try again while the app is open.</string>
+
+    <string name="banner_camera_title">No camera access</string>
+    <string name="banner_camera_text">Without camera permission the app cannot take photos. Allow access or open the system settings.</string>
+    <string name="banner_restricted_title">Background work is restricted</string>
+    <string name="banner_restricted_text">This app is set to “Restricted”: Android will stop background capture. Switch background activity to “Unrestricted”.</string>
+    <string name="banner_background_title">⚠️ Android may limit background work</string>
+    <string name="banner_background_text">Battery optimization may delay or interrupt background capture. Allowing unrestricted use lowers the risk but does not guarantee a photo at every moment.</string>
+    <string name="banner_notifications_title">Notifications are off</string>
+    <string name="banner_notifications_text">Without notifications you will not see the service card or new-photo messages. Capture keeps working regardless.</string>
+
+    <string name="schedule_card_title">Schedule</string>
+    <string name="schedule_mode_label">Mode</string>
+    <string name="schedule_per_day_label">Photos per day</string>
+    <string name="schedule_interval_label">Interval</string>
+    <string name="schedule_screen_off_label">Screen off</string>
+    <string name="schedule_screen_off_skip">Skip</string>
+    <string name="schedule_screen_off_shoot">Shoot</string>
+    <string name="schedule_notify_label">Notify after a photo</string>
+
+    <string name="state_card_title">Status</string>
+    <string name="state_camera">Camera</string>
+    <string name="state_notifications">Notifications</string>
+    <string name="state_background">Background work</string>
+    <string name="state_service">Background service</string>
+    <string name="status_granted">Allowed</string>
+    <string name="status_denied">Not allowed</string>
+    <string name="status_notifications_on">On</string>
+    <string name="status_notifications_off">Off</string>
+    <string name="status_unrestricted_short">Unrestricted</string>
+    <string name="status_optimized_short">Optimized</string>
+    <string name="status_restricted_short">Restricted</string>
+    <string name="status_unrestricted">✅ Unrestricted background work</string>
+    <string name="status_optimized">⚠️ Android may limit background work</string>
+    <string name="status_restricted">⛔ Background work is restricted</string>
+    <string name="status_service_off">Off</string>
+    <string name="status_service_running">Running</string>
+    <string name="status_service_stopped">Not running</string>
+    <string name="status_service_paused">Paused</string>
+
+    <string name="latest_photo_title">Latest photo</string>
+    <string name="latest_photo_hint">Tap to open</string>
+    <string name="latest_photo_none">No photos yet. The first one will appear at a random moment once capture is on.</string>
+
+    <!-- ===================================================== photos -->
+    <string name="photos_title">Photos</string>
+    <string name="photos_empty_title">Your photos will appear here</string>
+    <string name="photos_empty_text">Turn on automatic photos and the app will catch a few random moments of your day.</string>
+    <string name="photos_empty_action">Go to Home</string>
+
+    <!-- ===================================================== photo viewer -->
+    <string name="viewer_subtitle">Automatic photo</string>
+    <string name="viewer_delete_failed">Could not delete the photo</string>
+    <string name="viewer_missing_title">Photo unavailable</string>
+    <string name="viewer_missing_text">The file was deleted from the device gallery or moved. The history entry is kept.</string>
+    <string name="viewer_delete_title">Delete photo?</string>
+    <string name="viewer_delete_text">The file will be removed from the device. This cannot be undone.</string>
+
+    <!-- ===================================================== history -->
+    <string name="history_title">History</string>
+    <string name="history_empty_title">History is empty</string>
+    <string name="history_empty_text">Every capture attempt will show up here: successful photos, skips and errors — in plain words.</string>
+    <string name="history_success">Photo taken</string>
+    <string name="history_success_deleted">Photo taken (file deleted)</string>
+    <string name="history_failed">Failed: %1$s</string>
+    <string name="history_skipped_screen_off">Skipped: the screen was off</string>
+    <string name="history_missed_hint">%1$s · moment missed, the next one was rescheduled</string>
+    <plurals name="history_day_summary">
+        <item quantity="one">%d photo</item>
+        <item quantity="other">%d photos</item>
+    </plurals>
+    <plurals name="history_skipped_screen_off_many">
+        <item quantity="one">%d moment skipped: the screen was off</item>
+        <item quantity="other">%d moments skipped: the screen was off</item>
+    </plurals>
+    <plurals name="history_missed">
+        <item quantity="one">%d scheduled moment missed (the phone was off or asleep)</item>
+        <item quantity="other">%d scheduled moments missed (the phone was off or asleep)</item>
+    </plurals>
+
+    <!-- ===================================================== settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_auto">Automatic photos</string>
+    <string name="settings_auto_subtitle">Shoot with the main camera at random moments of the day</string>
+    <string name="settings_daily_limit">Photos per day</string>
+    <string name="settings_daily_limit_subtitle">The counter resets at local midnight</string>
+    <string name="settings_mode">Schedule mode</string>
+    <string name="settings_mode_fully_random_hint">The chosen number of moments is spread randomly over the day — no bursts and no catch-up shots.</string>
+    <string name="settings_mode_interval_hint">After every attempt a new random pause within your bounds is drawn — until the daily limit is reached.</string>
+    <string name="settings_interval_min">Minimum interval</string>
+    <string name="settings_interval_max">Maximum interval</string>
+    <string name="settings_interval_summary">Pause between photos: %1$s</string>
+    <string name="settings_interval_doze_hint">In Doze mode Android may shift wake-ups by a few minutes — this is normal.</string>
+    <string name="settings_skip_screen_off">Don’t shoot while the screen is off</string>
+    <string name="settings_skip_screen_off_subtitle">The moment is skipped and not counted; there will be no catch-up photos after the screen turns on</string>
+
+    <string name="settings_section_notifications">Notifications</string>
+    <string name="settings_notify_success">Notify after a successful photo</string>
+    <string name="settings_notify_success_subtitle">A short message with a thumbnail — only when the photo is really saved</string>
+    <string name="settings_notifications_permission">Notification permission</string>
+    <string name="settings_notifications_hint">Notifications are disabled in the system: you will not see the service card or new-photo messages.</string>
+
+    <string name="settings_section_background">Background work</string>
+    <string name="background_unrestricted_text">Android applies no battery optimization to the app. The background service can keep running while automatic photos are on.</string>
+    <string name="background_optimized_text">Battery optimization is active for the app. The system may delay wake-ups and stop the service in the background. “Unrestricted” is recommended.</string>
+    <string name="background_restricted_text">Background activity is restricted: Android will stop capture as soon as the app leaves the screen. Open the settings and choose “Unrestricted”.</string>
+    <string name="background_vendor_hint">Some devices (Xiaomi, Huawei, Samsung, OnePlus and others) add their own vendor restrictions — check the “Battery” section of the app’s settings.</string>
+    <string name="background_no_guarantee">“Unrestricted” lowers the chance of being stopped but does not guarantee a photo at every moment: the final decision is always the system’s.</string>
+    <string name="background_android_rules">Android only lets the camera be started in the background while the app is open. After a reboot or an update capture must be resumed manually — the app will tell you with a notification.</string>
+
+    <string name="settings_section_permissions">Permissions</string>
+    <string name="settings_permissions_footer">The app requests only the camera and notifications. Microphone, location and network access are not used.</string>
+
+    <string name="settings_section_about">About</string>
+    <string name="about_version">Version</string>
+    <string name="about_description">Serendip is a random photo diary. During the day the app picks a few moments on its own and takes a photo with the main camera while you go about your business.</string>
+    <string name="about_privacy">All photos stay on this device, in the gallery. The app sends nothing to the network and does not analyse the photos.</string>
+
+    <!-- ===================================================== onboarding -->
+    <string name="onboarding_welcome_title">A random photo diary</string>
+    <string name="onboarding_welcome_text">Serendip takes a few photos a day at random moments — with the main camera, without your involvement.</string>
+    <string name="onboarding_how_title">How it works</string>
+    <string name="onboarding_how_text">You choose how many photos per day and in which mode. The app keeps a small background service with a persistent notification and takes a shot at the chosen moment if the phone is on.</string>
+    <string name="onboarding_privacy_text">Photos are stored only on this device. No network transfer, cloud or analytics. The microphone is never used.</string>
+    <string name="onboarding_consent">I understand that the app will take photos with the back camera on its own at random moments while this mode is on</string>
+    <string name="onboarding_camera_title">Camera access</string>
+    <string name="onboarding_camera_text">The only required permission. Only the back camera is used, and only at the scheduled moments.</string>
+    <string name="onboarding_camera_denied_hint">The permission was denied without the option to ask again. Enable camera access in the app’s system settings.</string>
+    <string name="onboarding_notifications_title">Notifications</string>
+    <string name="onboarding_notifications_text">Android shows a persistent notification while the background service runs, and after every successful photo the app can send a short message. You can turn this off later.</string>
+    <string name="onboarding_background_title">Background work</string>
+    <string name="onboarding_background_text">To make the system stop capture less often, allow the app to run without battery restrictions. This is optional and offers no guarantee, but noticeably improves reliability.</string>
+    <string name="onboarding_status_label">Status</string>
+    <string name="onboarding_done_title">All set</string>
+    <string name="onboarding_done_text">You can turn on automatic photos right now or do it later from the home screen. Schedule options live in Settings.</string>
+    <string name="onboarding_done_no_camera">Automatic photos cannot be turned on without camera access. You can grant the permission later from the home screen.</string>
+    <string name="onboarding_enable_now">Turn on</string>
+    <string name="onboarding_later">Later</string>
+</resources>
